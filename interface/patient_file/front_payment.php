@@ -667,8 +667,8 @@ function toencounter(enc, datestr, topframe) {
                             ?>
                                 <tr>
                                     <!--<td><?php //echo text($each_row['code_text']); ?></td>-->
-                                    <td><?php echo text($each_row['fee']); ?></td>
-                                    <td><?php echo text($each_row['units']); ?></td>
+                                    <td><?php //echo text($each_row['fee']); ?></td>
+                                    <td><?php //echo text($each_row['units']); ?></td>
                                     <td><?php echo text($each_row['fee'] * $each_row['units']); ?></td>
                                 </tr>
                         <?php } ?>
