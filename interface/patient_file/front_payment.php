@@ -685,7 +685,7 @@ function toencounter(enc, datestr, topframe) {
                         while ($myproducts = sqlFetchArray($dres)) {
                             ?>
                             <tr>
-                                <td><?php echo text($myproducts['name']); ?></td>
+                                <!--<td><?php echo text($myproducts['name']); ?></td>-->
                                 <td><?php echo text($myproducts['fee']); ?></td>
                                 <td><?php echo text($myproducts['quantity']); ?></td>
                                 <td><?php echo text($myproducts['fee'] * $myproducts['quantity']); ?></td>
