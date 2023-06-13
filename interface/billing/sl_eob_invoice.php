@@ -119,7 +119,7 @@ function bucks($amount)
                 let code = pfx.substring(pfx.indexOf('[') + 1, pfxlen - 1);
                 let cPay = parseFloat(f[pfx + '[pay]'].value).toFixed(2);
                 let cAdjust = parseFloat(f[pfx + '[adj]'].value).toFixed(2);
-
+                alert(cAdjust);
                 if ((cPay !== '0') || cAdjust !== '0') {
                     allempty = false;
                 }
