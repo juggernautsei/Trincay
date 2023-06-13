@@ -144,7 +144,7 @@ function bucks($amount)
                     .then(res => { });
                     return false;
                 }
-                if ((cAdjust !== '0') && !f[pfx + '[reason]'].value && !adjDisable) {
+                if ((cAdjust !== '0.00') && !f[pfx + '[reason]'].value && !adjDisable) {
                     let message = <?php echo xlj('Please select an adjustment reason for code') ?> + " " + code;
                     (async (message, time) => {
                         await asyncAlertMsg(message, time, 'danger', 'lg');
