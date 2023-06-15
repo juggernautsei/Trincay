@@ -452,7 +452,8 @@ if (($_GET['html'] ?? null) == 1) {
             // convert to US if metric locale
             $height = (($isMetric) ? convertHeightToUs($data['height']) : $data['height']);
             $weight = (($isMetric) ? convertWeightToUs($data['weight']) : $data['weight']);
-            $head_circ = $data['head_circ'];
+            //$head_circ = $data['head_circ'];
+            $head_circ = (($isMetric) ? convertHeadCircToUS($data['head_circ']) : $data['head_circ']);
 
             if ($date == "") {
                 continue;
