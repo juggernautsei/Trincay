@@ -82,7 +82,7 @@ if (!empty($first_datapoint)) {
     $height = (($isMetric) ? convertHeightToUs($first_datapoint['height']) : $first_datapoint['height']);
     $weight = (($isMetric) ? convertWeightToUS($first_datapoint['weight']) : $first_datapoint['weight']);
     //$head_circ = $first_datapoint['head_circ'];
-    $head_circ = (($isMetric) ? convertWeightToUS($first_datapoint['head_circ']) : $first_datapoint['head_circ']);
+    $head_circ = (($isMetric) ? convertHeadCircToUS($first_datapoint['head_circ']) : $first_datapoint['head_circ']);
     if ($date != "") {
         $charttype_date = $date;
     }
@@ -137,6 +137,11 @@ function convertHeightToUs($height)
 function convertWeightToUs($weight)
 {
     return $weight * 2.20462262185;
+}
+
+function convertHeadCircToUS($head_circ)
+{
+    return $head_circ * 0.3937008;
 }
 /******************************/
 /******************************/
