@@ -265,8 +265,8 @@ function deceasedDays($days_deceased)
 }
 
 $deceased = is_patient_deceased($pid);
-var_dump($deceased);
-$deceased = 0;
+//var_dump($deceased);
+//$deceased = 0;
 
 // Display image in 'widget style'
 function image_widget($doc_id, $doc_catg)
@@ -1013,8 +1013,8 @@ $oemr_ui = new OemrUI($arrOeUiSettings);
             <div class="row">
                 <div class="col-md-8">
                     <?php
-
-                    if ($deceased > 0) :
+                    (int)$deceased_days = $deceased['date_deceased'];
+                    if ($deceased_days > 0) :
                         echo $twig->getTwig()->render('patient/partials/deceased.html.twig', [
                             'deceasedDays' => deceasedDays($deceased),
                         ]);
