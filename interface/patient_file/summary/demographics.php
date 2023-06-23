@@ -265,8 +265,6 @@ function deceasedDays($days_deceased)
 }
 
 $deceased = is_patient_deceased($pid);
-//var_dump($deceased);
-//$deceased = 0;
 
 // Display image in 'widget style'
 function image_widget($doc_id, $doc_catg)
