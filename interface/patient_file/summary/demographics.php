@@ -264,7 +264,8 @@ function deceasedDays($days_deceased)
     return xlt("Deceased") . " - " . text($deceased_date) . " (" . text($num_of_days) . ")";
 }
 
-//$deceased = is_patient_deceased($pid);
+$deceased = is_patient_deceased($pid);
+echo $deceased;
 $deceased = 0;
 
 // Display image in 'widget style'
