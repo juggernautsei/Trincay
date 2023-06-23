@@ -1011,8 +1011,8 @@ $oemr_ui = new OemrUI($arrOeUiSettings);
             <div class="row">
                 <div class="col-md-8">
                     <?php
-                    (int)$deceased_days = $deceased['date_deceased'];
-                    if ($deceased_days > 0) :
+
+                    if ($deceased['days_deceased'] !== null && $deceased['date_deceased'] !== "0") :
                         echo $twig->getTwig()->render('patient/partials/deceased.html.twig', [
                             'deceasedDays' => deceasedDays($deceased),
                         ]);
